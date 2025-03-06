@@ -38,7 +38,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,13 +51,15 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const SizedBox(height: 30),
-            OutlinedButton(onPressed: (){
-              Navigator.push(context, MaterialPageRoute(builder: (ctx){
-                return const PdfViewerPage();
-              }));
-            }, child: const Text('Open PDF Detail Page'))
+            OutlinedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+                    return const PdfViewerPage();
+                  }));
+                },
+                child: const Text('Open PDF Detail Page'))
           ],
-    ),
+        ),
       ),
     );
   }
